@@ -5,38 +5,36 @@
   box-sizing: border-box;
 }
 
-body {
-  overflow-y: auto;
-}
-
 html {
   font-size: 16px;
 }
+
 ul {
   list-style: none;
 }
+
 html,
 body {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
+  width: 600vw;
   overflow: hidden;
   font-family: sans-serif;
 }
 
 .container {
   display: flex;
-  max-width: 600vw;
-  width: 100%;
-  height: 100vh;
+
+  /* width: 100; */
+  /* max-width: 600vw; */
   transition: transform 0.6s ease;
-  height: auto;
+  /* height: auto; */
 }
 
 .page {
-  flex: 0 0 100vw;
+  width: 100vw;
   height: 100vh;
 }
-
 .page:nth-child(1) {
   background-image: url(../img/Untitled-1.jpg);
   background-repeat: no-repeat;
@@ -88,9 +86,12 @@ body {
   align-items: center;
   justify-content: center;
 }
-
+.left1 p {
+  margin-left: 0;
+  transform: translate(0);
+}
 .left2 img {
-  width: 35rem;
+  width: 100%;
 }
 
 .right2 {
@@ -170,19 +171,23 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
+
 .left3 {
   width: 700px;
   color: #e6e2d9;
   padding-left: 450px;
   transform: translateY(350px);
   padding-bottom: 50px;
+  box-sizing: border-box;
   font-size: 1.2rem;
 }
+
 .right3 p {
   color: #e6e2d9;
   margin-bottom: 30px;
   font-size: 1.5rem;
 }
+
 .page:nth-child(4) {
   background-image: url(../img/Untitled-4.png);
   background-repeat: no-repeat;
@@ -191,15 +196,18 @@ body {
   font-size: 1.5rem;
   color: #e6e2d9;
 }
+
 .top3 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 90px 0;
 }
+
 .top3 img {
   width: 30rem;
 }
+
 .bottom3 ul {
   display: flex;
   flex-wrap: nowrap;
@@ -207,17 +215,21 @@ body {
   align-items: center;
   text-align: center;
 }
+
 .bottom3 ul li h5 {
   font-size: 2rem;
   font-weight: 200;
 }
+
 .bottom3 ul li h4 {
   font-size: 3rem;
   margin-bottom: 20px;
 }
+
 .bottom3 ul li p img {
   width: 14rem;
 }
+
 .page:nth-child(5) {
   background-image: url(../img/Untitled-1.jpg);
   background-repeat: no-repeat;
@@ -228,29 +240,37 @@ body {
   align-items: center;
   height: 100vh;
 }
+
 .left5 {
   display: flex;
   flex-direction: column;
   gap: 10px;
   max-width: 600px;
+  padding: 0 10px;
 }
+
 .left5 .left5-1 img {
   margin-left: 30px;
 }
+
 .left5 a img {
   width: 100%;
 }
+
 .left5-2 p img {
   width: 30%;
   margin: 10px;
 }
+
 .right5 {
   display: flex;
   flex-direction: column;
   gap: 20px;
   max-width: 600px;
   text-align: end;
+  padding: 0 10px;
 }
+
 .right5 h5 {
   font-size: 2.5rem;
   font-weight: 600;
@@ -273,12 +293,15 @@ body {
   align-items: center;
   height: 100vh;
 }
+
 .left6 {
   display: flex;
   flex-direction: column;
   gap: 20px;
   max-width: 600px;
+  padding: 0 10px;
 }
+
 .left6 h5 {
   font-size: 2.5rem;
   font-weight: 600;
@@ -290,24 +313,115 @@ body {
   font-weight: 600;
   color: #fc2121;
 }
+
 .right6 {
   display: flex;
   flex-direction: column;
   gap: 10px;
   max-width: 600px;
+  padding: 0 10px;
 }
+
 .right6 .right6-1 img {
   margin-left: 60px;
 }
+
 .right6 a img {
   width: 100%;
 }
+
 .right6-2 {
   text-align: end;
 }
+
 .right6-2 p img {
   width: 30%;
   margin: 10px;
+}
+
+/* 반응형: 1024px ~ 1280px 사이 (중간 사이즈 화면) */
+@media (max-width: 1280px) {
+  html,
+  body {
+    font-size: 15px;
+    width: 100vw;
+
+    overflow-y: auto;
+  }
+
+  body {
+    overflow: auto;
+  }
+  .container {
+    display: block;
+  }
+  .page {
+    font-size: 3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 40px;
+    height: auto !important;
+  }
+
+  .left1 h1 {
+    font-size: 6rem;
+  }
+
+  .left1 h2 {
+    font-size: 7rem;
+  }
+
+  .left1 p {
+    font-size: 1.125rem;
+  }
+
+  .right1 img {
+    width: 28rem;
+    transform: translateY(-3.125rem);
+  }
+  .right2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .right2_bottom {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .left3 {
+    width: 500px;
+    padding-left: 250px;
+    transform: translateY(200px);
+  }
+
+  .right3 {
+    font-size: 1.25rem;
+    width: 600px;
+  }
+  .right3 p {
+    padding: 0 30px;
+    box-sizing: border-box;
+    text-align: right;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    flex-direction: column !important;
+    transform: none !important;
+    max-width: 100% !important;
+    width: 100%;
+    height: auto !important;
+  }
+
+  .page {
+    flex: none;
+    width: 100vw;
+    height: auto;
+  }
 }
 /* 반응형: 768px 이하 */
 @media (max-width: 768px) {
@@ -318,10 +432,18 @@ body {
   body {
     overflow: auto;
   }
+
+  .container {
+    flex-direction: column !important;
+  }
+
   .page {
     font-size: 2rem;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 1.25rem;
+    box-sizing: border-box;
   }
 
   .left1 h1 {
@@ -377,6 +499,8 @@ body {
 
   .right3 p {
     font-size: 1rem;
+    padding: 0 30px;
+    box-sizing: border-box;
   }
 
   .page:nth-child(4) {
@@ -384,78 +508,23 @@ body {
     padding: 3rem 2rem;
   }
 
-  .top3 img {
+  .top4 img {
     width: 20rem;
   }
 
-  .bottom3 ul {
+  .bottom4 ul {
     flex-direction: column;
   }
 
-  .bottom3 ul li h5 {
+  .bottom4 ul li h5 {
     font-size: 1.5rem;
   }
 
-  .bottom3 ul li h4 {
+  .bottom4 ul li h4 {
     font-size: 2rem;
   }
 
-  .bottom3 ul li p img {
+  .bottom4 ul li p img {
     width: 12rem;
-  }
-}
-
-/* 반응형: 1024px ~ 1280px 사이 (중간 사이즈 화면) */
-@media (max-width: 1280px) and (min-width: 1024px) {
-  html {
-    font-size: 15px;
-  }
-
-  body {
-    overflow: auto;
-  }
-
-  .page {
-    font-size: 3rem;
-    flex-direction: column;
-    padding: 2rem;
-  }
-
-  .left1 h1 {
-    font-size: 6rem;
-  }
-
-  .left1 h2 {
-    font-size: 7rem;
-  }
-
-  .left1 p {
-    font-size: 1.125rem;
-  }
-
-  .right1 img {
-    width: 28rem;
-    transform: translateY(-3.125rem);
-  }
-
-  .left3 {
-    width: 500px;
-    padding-left: 250px;
-    transform: translateY(200px);
-  }
-
-  .right3 {
-    font-size: 1.25rem;
-    width: 600px;
-  }
-
-  .right2 {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-
-  .right2_bottom {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
   }
 }
