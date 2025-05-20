@@ -197,18 +197,18 @@ body {
   color: #e6e2d9;
 }
 
-.top3 {
+.top4 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 90px 0;
 }
 
-.top3 img {
+.top4 img {
   width: 30rem;
 }
 
-.bottom3 ul {
+.bottom4 ul {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -216,17 +216,17 @@ body {
   text-align: center;
 }
 
-.bottom3 ul li h5 {
+.bottom4 ul li h5 {
   font-size: 2rem;
   font-weight: 200;
 }
 
-.bottom3 ul li h4 {
+.bottom4 ul li h4 {
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
-.bottom3 ul li p img {
+.bottom4 ul li p img {
   width: 14rem;
 }
 
