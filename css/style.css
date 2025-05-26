@@ -16,18 +16,23 @@ ul {
 html,
 body {
   /* width: 100%;
-  height: 100%; */
-  width: 600vw;
-  overflow: hidden;
+  height: 100%; 
+  overflow: hidden;*/
   font-family: sans-serif;
 }
-
+.wrap {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 .container {
+  position: absolute;
+  left: 0;
   display: flex;
-
   /* width: 100; */
   /* max-width: 600vw; */
-  transition: transform 0.6s ease;
+  /* transition: transform 0.6s ease; */
   /* height: auto; */
 }
 
@@ -35,7 +40,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
-.page:nth-child(1) {
+.page1 {
   background-image: url(../img/Untitled-1.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -76,10 +81,11 @@ body {
   transform: translateY(-6.25rem);
 }
 
-.page:nth-child(2) {
+.page2 {
   background-image: url(../img/Untitled-2.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   gap: 100px;
   display: flex;
   height: 100vh;
@@ -162,7 +168,7 @@ body {
   padding-left: 20px;
 }
 
-.page:nth-child(3) {
+.page3 {
   background-image: url(../img/Untitled-3.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -188,7 +194,7 @@ body {
   font-size: 1.5rem;
 }
 
-.page:nth-child(4) {
+.page4 {
   background-image: url(../img/Untitled-4.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -230,7 +236,7 @@ body {
   width: 14rem;
 }
 
-.page:nth-child(5) {
+.page5 {
   background-image: url(../img/Untitled-1.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -283,7 +289,7 @@ body {
   color: #fc2121;
 }
 
-.page:nth-child(6) {
+.page6 {
   background-image: url(../img/Untitled-1.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -345,20 +351,17 @@ body {
   body {
     font-size: 15px;
     width: 100vw;
-
+  }
+  .wrap {
     overflow-y: auto;
   }
-
-  body {
-    overflow: auto;
-  }
   .container {
-    display: block;
+    flex-direction: column;
   }
   .page {
     font-size: 3rem;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 2rem;
     gap: 40px;
     height: auto !important;
